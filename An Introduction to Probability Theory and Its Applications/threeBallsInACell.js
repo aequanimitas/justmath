@@ -35,43 +35,29 @@ var abc = 'abc',
 
 // event A: atleast one cell has two or more inhabitants
 var eventA = function () {
-  var cellCount = 0;
-  sampleSpace.forEach(function(e,i,a) {
-    cellCount += handleRow(e) ? 1 : 0;
-  });
-  return cellCount;
+  return sampleSpace.filter(handleRow);
 };
 
 var eventB = function () {
-  var cellCount = 0;
-  sampleSpace.forEach(function(e,i,a) {
-    cellCount += firstCellEmpty(e) ? 1 : 0;
-  });
-  return cellCount;
+  return sampleSpace.filter(firstCellEmpty);
 };
 
-var eventC = function () {
-  var cellCount = 0;
-  sampleSpace.forEach(function(e,i,a) {
-    cellCount += firstCellEmpty(e) && handleRow(e) ? 1 : 0;
-  });
-  return cellCount;
-};
+//var eventC = function () {
+//  sampleSpace.forEach(function(e,i,a) {
+//    cellCount += firstCellEmpty(e) && handleRow(e) ? 1 : 0;
+//  });
+//};
 
-var eventCOr = function () {
-  var cellCount = 0;
-  sampleSpace.forEach(function(e,i,a) {
-    cellCount += firstCellEmpty(e) || handleRow(e) ? 1 : 0;
-  });
-  return cellCount;
-};
+//var eventCOr = function () {
+//  var cellCount = 0;
+//  sampleSpace.forEach(function(e,i,a) {
+//    cellCount += firstCellEmpty(e) || handleRow(e) ? 1 : 0;
+//  });
+//  return cellCount;
+//};
 
 var eventD = function () {
-  var cellCount = 0;
-  sampleSpace.forEach(function(e,i,a) {
-    cellCount += !handleRow(e) ? 1 : 0;
-  });
-  return cellCount;
+  return sampleSpace.filter(handleRow);
 };
 
 function handleRow(e) {
@@ -88,8 +74,11 @@ function firstCellEmpty(e) {
   return e[0] ? true : false;
 }
 
-console.log("Rows with cells that has atleast one element: "+ eventA());
-console.log("Rows with first cells that are not empty: "+ eventB());
-console.log("Rows that both event A and B occur: "+ eventC());
-console.log("Rows that event A or B occur: "+ eventCOr());
-console.log("Rows that event A does not occur: "+ eventD());
+console.log("Rows with cells that has atleast one element: ");
+console.log(eventA());
+console.log(eventA().length);
+console.log("\n");
+console.log("Rows with first cells that are not empty: "+ eventB().length);
+//console.log("Rows that both event A and B occur: "+ eventC().length);
+//console.log("Rows that event A or B occur: "+ eventCOr().length);
+console.log("Rows that event A does not occur: "+ eventD().length);
