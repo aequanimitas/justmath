@@ -40,19 +40,19 @@ var eventA = function () {
 
 var eventB = function () {
   return sampleSpace.filter(function(e,i,a) {
-    if(!!cellEmpty(e,0)) return e;
+    if(!!cellNotEmpty(e,0)) return e;
   });
 };
 
 var eventC = function() {
   return sampleSpace.filter(function(e,i,a) {
-    if (!cellEmpty(e) && handleRow(e)) return e;
+    if (!cellNotEmpty(e) && handleRow(e)) return e;
   });
 };
 
 var eventCOr = function() {
   return sampleSpace.filter(function(e,i,a) {
-    if(cellEmpty(e) || handleRow(e)) return e;
+    if(cellNotEmpty(e) || handleRow(e)) return e;
   });
 };
 
@@ -72,7 +72,7 @@ function atleastHasTwo(e) {
   return e ? e.length >= 2 ? true : false : false;
 };
 
-function cellEmpty(e,i) {
+function cellNotEmpty(e,i) {
   return e[i] ? true : false;
 }
 
