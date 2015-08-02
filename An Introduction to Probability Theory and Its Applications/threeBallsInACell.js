@@ -32,32 +32,33 @@ var abc = 'abc',
       [ c,b,a ]
      ];
 
-
 // event A: atleast one cell has two or more inhabitants
 var eventA = function () {
   return sampleSpace.filter(handleRow);
 };
 
 var eventB = function () {
-  return sampleSpace.filter(firstCellEmpty);
+ return sampleSpace.filter(function(e,i,a) {
+    if(!!cellNotEmpty(e,0)) return e;
+  });
 };
 
-//var eventC = function () {
-//  sampleSpace.forEach(function(e,i,a) {
-//    cellCount += firstCellEmpty(e) && handleRow(e) ? 1 : 0;
-//  });
-//};
+var eventC = function() {
+  return sampleSpace.filter(function(e,i,a) {
+    if (!cellNotEmpty(e) && handleRow(e)) return e;
+  });
+};
 
-//var eventCOr = function () {
-//  var cellCount = 0;
-//  sampleSpace.forEach(function(e,i,a) {
-//    cellCount += firstCellEmpty(e) || handleRow(e) ? 1 : 0;
-//  });
-//  return cellCount;
-//};
+var eventCOr = function() {
+  return sampleSpace.filter(function(e,i,a) {
+    if(cellNotEmpty(e) || handleRow(e)) return e;
+  });
+};
 
 var eventD = function () {
-  return sampleSpace.filter(handleRow);
+  return sampleSpace.filter(function(e,i,a) {
+    if (!handleRow(e)) return e; 
+  });
 };
 
 function handleRow(e) {
@@ -70,15 +71,12 @@ function atleastHasTwo(e) {
   return e ? e.length >= 2 ? true : false : false;
 };
 
-function firstCellEmpty(e) {
-  return e[0] ? true : false;
+function cellNotEmpty(e,i) {
+  return e[i] ? true : false;
 }
 
-console.log("Rows with cells that has atleast one element: ");
-console.log(eventA());
-console.log(eventA().length);
-console.log("\n");
-console.log("Rows with first cells that are not empty: "+ eventB().length);
-//console.log("Rows that both event A and B occur: "+ eventC().length);
-//console.log("Rows that event A or B occur: "+ eventCOr().length);
-console.log("Rows that event A does not occur: "+ eventD().length);
+console.log("Rows with cells that has atleast one element (event A): " + eventA().length);
+console.log("Rows with first cells that are not empty (event B): "+ eventB().length);
+console.log("Rows that both event A and B occur (event C): "+ eventC().length);
+console.log("Rows that event A or B occur: "+ eventCOr().length);
+console.log("Rows that event A does not occur (event D): "+ eventD().length);
