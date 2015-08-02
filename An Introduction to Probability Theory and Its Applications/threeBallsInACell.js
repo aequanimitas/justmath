@@ -38,7 +38,13 @@ var eventA = function () {
 };
 
 var eventB = function () {
- return sampleSpace.filter(function(e,i,a) {
+  return sampleSpace.filter(function(e,i,a) {
+    return cellNotEmpty(e);
+  });
+};
+
+var eventD = function () {
+  return sampleSpace.filter(function(e,i,a) {
     if(!!cellNotEmpty(e,0)) return e;
   });
 };
