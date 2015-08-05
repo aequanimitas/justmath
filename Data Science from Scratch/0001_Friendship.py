@@ -53,13 +53,18 @@ avg_connections = total_connections / num_users
 # number of friends by id
 # list comprehension using the for loop
 #
-# for each element in "users" array
-# store the "user" id and the return value of the procedure number_of_friends()
-# into a tuple
+# for each element in "users" array:
+# - store the "user" id and the return value of the procedure number_of_friends()
+#   into a tuple
+# - number_of_friends is just a wrapper for getting a friend's friend count
+# then append it into the array
 num_friends_by_id = [(user["id"], number_of_friends(user)) for user in users]
 
-# the sorted HOP takes an iterable, which in this case is an array of tuples
-# and for each tuple, a lambda is used to catch the values that are stored in the tuple
+# sorted 
+# - HOP 
+# - takes an iterable as 1st argument, which in this case is an array of tuples
+# lambda
+# - for each tuple, the lambda is used to catch the values that are stored in the tuple
 # and returns the number of friends, which it then uses as the key for sorted
 #
 # the reverse argument tells the sorted procedure to order the elements in a decreasing
@@ -96,6 +101,11 @@ def not_friends(user, other_user):
     return all(not_the_same(friend, other_user)
                   for friend in user["friends"])
 
+# Counter
+# - unordered collection where elements are stored as dictionary keys and their counts are
+#   stored as dictionary values
+# - Counts are allowed to be any integer value including zero or negative counts
+# - a dict subclass
 def friends_of_friend_ids(user):
     return Counter(foaf["id"] for friend in user["friends"]
                               for foaf in friend["friends"]
@@ -171,3 +181,49 @@ def most_common_interests_with(user):
                        for interest in interests_by_user_id[user["id"]]
                        for interested_user_id in user_ids_by_interest[interest]
                        if interested_user_id != user["id"])
+
+# the plot of this data will be available in chapter 3
+salaries_and_tenures = [(83000, 8.7), (88000, 8.1),
+                       (48000, 0.7), (76000, 6),
+                       (69000, 6.5), (76000, 7.5),
+                       (60000, 2.5), (83000, 10),
+                       (48000, 1.9), (63000, 4.2)]
+
+salary_by_tenure = defaultdict(list)
+
+for salary, tenure in salaries_and_tenures:
+    salary_by_tenure[tenure].append(salary)
+
+# this doesn't work, this just reports each scientist's salary
+average_salary_by_tenure = {
+    tenure: sum(salaries)/ len(salaries) for tenure, salaries in salary_by_tenure.items()
+}
+
+# it might be more helpful if we bucket by tenure
+# bucket == group
+def tenure_bucket(tenure):
+    if tenure < 2:
+        return "less than two"
+    elif tenure < 5:
+        return "between two and five"
+    else:
+        return "more than 5"
+
+# now using the tenure_bucket as an identifier
+salary_by_tenure_bucket = defaultdict(list)
+
+for salary, tenure in salaries_and_tenures:
+    bucket = tenure_bucket(tenure)
+    salary_by_tenure_bucket[bucket].append(salary)
+
+average_salary_by_bucket = {
+    tenure: sum(salaries)/ len(salaries) 
+    for tenure, salaries in salary_by_tenure_bucket.iteritems()
+}
+
+words_and_counts = Counter(word for user, interest in interests
+                                 for word in interest.lower().split())
+
+for word, count in words_and_counts.most_common():
+    if count > 1:
+        print word, count
