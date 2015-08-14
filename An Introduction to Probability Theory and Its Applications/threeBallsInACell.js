@@ -1,8 +1,9 @@
-var abc = 'abc',
-    a = 'a',
-    b = 'b',
-    c = 'c',
-    sampleSpace = [ 
+var assert      = require("assert"),
+    abc         = 'abc',
+    a           = 'a',
+    b           = 'b',
+    c           = 'c',
+    sampleSpace = [
       [ abc,, ],
       [ ,abc, ],
       [ ,,abc ],
@@ -46,13 +47,13 @@ var eventB = function () {
 
 var eventC = function() {
   return sampleSpace.filter(function(e,i,a) {
-    if (!cellNotEmpty(e) && handleRow(e)) return e;
+    if (!!cellNotEmpty(e, 0) && handleRow(e)) return e;
   });
 };
 
 var eventCOr = function() {
   return sampleSpace.filter(function(e,i,a) {
-    if(cellNotEmpty(e) || handleRow(e)) return e;
+    if(cellNotEmpty(e,0) || handleRow(e)) return e;
   });
 };
 
@@ -76,8 +77,14 @@ function cellNotEmpty(e,i) {
   return e[i] ? true : false;
 }
 
-console.log("Rows with cells that has atleast one element (event A): " + eventA().length);
-console.log("Rows with first cells that are not empty (event B): "+ eventB().length);
-console.log("Rows that both event A and B occur (event C): "+ eventC().length);
-console.log("Rows that event A or B occur: "+ eventCOr().length);
-console.log("Rows that event A does not occur (event D): "+ eventD().length);
+console.log(
+"Event A: Rows with cells that has atleast one element\n" +
+"Event B: Rows with first cells that are not empty\n" + 
+"Event C: Rows that both event A and B occur\n" +
+"Event COr: Rows that event A or B occur\n" +
+"Event D: Rows that event A does not occur");
+assert(eventA().length == 21, "Event A should have 21 simple events");
+assert(eventB().length == 19, "Event B should have 19 simple events");
+assert(eventC().length == 13, "Event C should have 13 simple events");
+assert(eventCOr().length == 27, "Event COr should be the whole sample space");
+assert(eventD().length == 6, "Event D should have 6 simple events");
