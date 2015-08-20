@@ -216,6 +216,7 @@ for salary, tenure in salaries_and_tenures:
     bucket = tenure_bucket(tenure)
     salary_by_tenure_bucket[bucket].append(salary)
 
+# our choice here on grouping is arbitrary/eyeballed (look at the tenure_bucket function)
 average_salary_by_bucket = {
     tenure: sum(salaries)/ len(salaries) 
     for tenure, salaries in salary_by_tenure_bucket.iteritems()
