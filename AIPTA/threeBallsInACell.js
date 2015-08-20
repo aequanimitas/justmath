@@ -1,38 +1,5 @@
 var assert      = require("assert"),
-    abc         = 'abc',
-    a           = 'a',
-    b           = 'b',
-    c           = 'c',
-    sampleSpace = [
-      [ abc,, ],
-      [ ,abc, ],
-      [ ,,abc ],
-      [ a+b,c, ],
-      [ a+c,b, ],
-      [ b+c,a, ],
-      [ a+b,,c ],
-      [ a+c,,b ],
-      [ b+c,,a ],
-      [ a,b+c, ],
-      [ b,a+c, ],
-      [ c,a+b, ],
-      [ a,,b+c ],
-      [ b,,a+c ],
-      [ c,,a+b ],
-      [ ,a+b,c ],
-      [ ,a+c,b ],
-      [ ,b+c,a ],
-      [ ,a,b+c ],
-      [ ,b,a+c ],
-      [ ,c,a+b ],
-      [ a,b,c ],
-      [ a,c,b ],
-      [ b,a,c ],
-      [ b,c,a ],
-      [ c,a,b ],
-      [ c,b,a ]
-     ];
-
+    sampleSpace = require("./sampleSpace2A")["sampleSpace"];
 
 // event A: atleast one cell has two or more inhabitants
 var eventA = function () {
