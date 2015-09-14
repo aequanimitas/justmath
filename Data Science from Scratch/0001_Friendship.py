@@ -218,7 +218,7 @@ for salary, tenure in salaries_and_tenures:
 
 # our choice here on grouping is arbitrary/eyeballed (look at the tenure_bucket function)
 average_salary_by_bucket = {
-    tenure: sum(salaries)/ len(salaries) 
+    tenure_bucket: sum(salaries)/ len(salaries) 
     for tenure, salaries in salary_by_tenure_bucket.iteritems()
 }
 
@@ -228,3 +228,15 @@ words_and_counts = Counter(word for user, interest in interests
 for word, count in words_and_counts.most_common():
     if count > 1:
         print word, count
+# again, eyeballed the cut-off values. These values already exists in the data, we just
+# have to see it
+# with more data and math, we could build a model for predicting the likelihood that a
+# user would pay
+
+def predeict_paid_or_unpaid(years_experience):
+    if years_experience < 3.0:
+        return "paid"
+    elif years_experience < 8.5:
+        return "unpaid"
+    else:
+        return "paid"
