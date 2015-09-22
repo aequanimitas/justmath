@@ -1,0 +1,200 @@
+Item,Category,Price,Profit,Actual Profit,Calories
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Chocolate Dipped Cone,Frozen Treats, $3.00 ,50%, $1.50 ,300
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Ice Cream Sandwich,Frozen Treats, $3.00 ,67%, $2.00 ,240
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Hamburger,Hot Food, $3.00 ,67%, $2.00 ,320
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Nachos,Hot Food, $3.00 ,50%, $1.50 ,560
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Hot Dog,Hot Food, $1.50 ,67%, $1.00 ,265
+Soda,Beverages, $2.50 ,80%, $2.00 ,120
+Licorice Rope,Candy, $2.00 ,50%, $1.00 ,280
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Gummy Bears,Candy, $2.00 ,50%, $1.00 ,300
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Popcorn,Hot Food, $5.00 ,80%, $4.00 ,500
+Beer,Beverages, $4.00 ,50%, $2.00 ,200
+Pizza,Hot Food, $2.00 ,25%, $0.50 ,480
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
+Chocolate Bar,Candy, $2.00 ,75%, $1.50 ,255
+Bottled Water,Beverages, $3.00 ,83%, $2.50 ,0
+Popsicle,Frozen Treats, $3.00 ,83%, $2.50 ,150
