@@ -1,5 +1,6 @@
 *.swp
 env/
+<<<<<<< HEAD
 bin/
 lib/
 local/
