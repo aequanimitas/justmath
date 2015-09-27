@@ -1,2 +1,8 @@
 *.swp
 env/
+bin/
+lib/
+local/
+include/
+pip-selfcheck.json
+man/
