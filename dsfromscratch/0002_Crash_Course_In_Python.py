@@ -30,3 +30,27 @@ list_mix = [ integer_list, heterogeneous_list ]
 
 list_length = len(integer_list)
 list_sum = sum(integer_list)
+
+# negative indices
+
+
+# range start number by default is 0
+# range produces list with elements from 1 to 9
+x_list = range(10)
+
+# range with start value
+xx_list = range(1, 10, 1)
+
+# range produces list with elements from 1 to 9, with jumps
+xy_list = range(1,10,2)
+
+# "pythonic" for last element
+xy_list[-1]
+
+# slices
+x_list_first_three = x_list[:3]
+x_list_three_to_end = x_list[3:]
+x_list_first_four = x_list[1:5]
+x_list_last_three = x_list[-3:]
+x_list_trim_frist_and_last = x_list[1:-1]
+copy_x_list = x_list[:]
