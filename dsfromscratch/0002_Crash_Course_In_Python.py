@@ -77,3 +77,67 @@ _,y = [1,2]
 # lists immutable cousins
 # useful if you want to return multiple values from a function
 xx, yy = [1,2]
+
+# can also be used in multiple assignment
+xxx, yyy = (1,2)
+
+# swapping variables
+xxx, yyy = yyy, xxx
+
+# dictionaries
+tweet = {
+        "user": "joelgrus",
+        "text" : "Data Science is Awesome",
+        "retweet_count" : 100,
+        "hashtags" : ["#data", "#science", "#datascience", "#awesome", "#yolo"]
+        }
+
+tweet_keys = tweet.keys()
+tweet_items = tweet.items()
+tweet_values = tweet.values()
+
+## using ```in``` in a list is slow
+"user" in tweet_keys
+
+## while in dictionaries, it is much faster
+"user" in tweet
+
+# using defaultdict
+# useful when you're trying to count frequency
+# you do not need to worry if a key in the dictionary exists as it will be handled
+# gracefully
+# it also adds a value on the object if a key is not in the dictionary using the
+# zero-argument function you provided when it is created
+
+from collections import defaultdict
+
+document = "Every one of these is slightly unwieldy, which is why defaultdict is useful. \
+A defaultdict is like a regular dictionary, except that when you try to look up a key it \
+doesn't contain, it first adds a value for it using a zero-argument function you provided"
+
+# the ```int``` argument says it defaults to 0
+word_count = defaultdict(int)
+for word in document.split():
+    word_count[word] += 1
+   
+# while a Counter turns a sequence into a defaultdict-like object mapping keys to counts
+from collections import Counter
+word_count_counter = Counter(document.split())
+
+# most common
+word_count_counter.most_common(10)
+
+# Sets: A collection of distinct elements
+s = set()
+s.add(1)
+s.add(1)
+
+# you can stack them!
+set(list(range(10))) 
+
+# Boolean
+# this will return false but all values are "Falsy"
+print False == None == [] == {} == "" == set() == 0 == 0.00
+
+# use ```all``` to assert "Falsy"-ness
+print all([False , None , [] , {} , "" , set() , 0 , 0.00])
