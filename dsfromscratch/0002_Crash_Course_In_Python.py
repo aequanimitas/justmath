@@ -23,3 +23,10 @@ try:
     print 0/0
 except ZeroDivisionError:
     print "cannot divide by zero"
+
+integer_list = [1,2,3]
+heterogeneous_list =["Apple", 2, True]
+list_mix = [ integer_list, heterogeneous_list ]
+
+list_length = len(integer_list)
+list_sum = sum(integer_list)
