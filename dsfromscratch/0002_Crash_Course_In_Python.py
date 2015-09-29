@@ -54,3 +54,26 @@ x_list_first_four = x_list[1:5]
 x_list_last_three = x_list[-3:]
 x_list_trim_frist_and_last = x_list[1:-1]
 copy_x_list = x_list[:]
+
+# the ```in``` operator. This checks elements in a list one by one
+# can be used in tuples too
+print 4 in range(10)
+c_list = range(100)
+
+# changes the original list
+c_list.extend(range(10))
+
+# no changes in original list
+c_list_add = c_list + [1,2,3]
+
+# unpacking lists
+# throws error Too Many Values to Unpack if the count of variables on both sides doesn't
+# match.
+# use _ as a catcher for unwanted values
+
+_,y = [1,2]
+
+# Tuples
+# lists immutable cousins
+# useful if you want to return multiple values from a function
+xx, yy = [1,2]
