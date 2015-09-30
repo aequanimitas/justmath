@@ -11,3 +11,17 @@ print sum_of_rolls_odd
 print first_roll_equal_second
 print first_roll_larger_second
 print atleast_on_roll_equal_four
+
+## using numpy
+import numpy as np
+
+x_labels = np.array("1 2 3 4".split())
+# we need a reversed order array for y label
+y_labels = np.array("1 2 3 4".split()[::-1])
+two_d_grid = np.zeros((5,5), object)
+
+## setup labels
+## apply to fourth row (0), per column
+two_d_grid[4,1:] = x_labels
+## apply to first column, all rows
+two_d_grid[:4,0] = y_labels
