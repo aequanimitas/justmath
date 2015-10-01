@@ -7,3 +7,4 @@ local/
 include/
 pip-selfcheck.json
 man/
+*.png
