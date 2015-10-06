@@ -182,3 +182,19 @@ ggg = natural_numbers()
 import random
 
 four_uniform_randoms = [random.random() for _ in range(4)]
+
+lasenggo = random.choice(["Dhen", "Jorj", "Tophe"])
+
+## get a sample
+lottery_numbers = range(1,73)
+winning_numbers = random.sample(lottery_numbers, 6)
+
+## regular expressions
+import re
+print all([
+    not re.match("a", "cat"),
+    re.search("a", "cat"),
+    not re.search("c", "dog"),
+    3 == len(re.split("[ab]", "carbs")),
+    "R-D-" == re.sub("[0-9]", "-", "R2D2")
+    ])
