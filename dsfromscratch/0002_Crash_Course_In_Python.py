@@ -141,3 +141,44 @@ print False == None == [] == {} == "" == set() == 0 == 0.00
 
 # use ```all``` to assert "Falsy"-ness
 print all([False , None , [] , {} , "" , set() , 0 , 0.00])
+
+## The not so basics
+## sorting
+## defaults to sorting smallest to biggest
+pos_neg = range(-10,10)
+
+## pos_neg.sort()
+## to assign on new variable, use sorted: y = sorted(x)
+
+## reverse
+## the key is a key
+sorted(pos_neg, key=abs, reverse=True)
+
+## List Comprehensions
+## use _ if you do not want to use some values
+## you can use dictionaries too!
+dct = {x: x + 1 for x in range(-10,10)}
+
+## generators
+## used when we need an object one element at a time, hindi isang bagsak
+## always use a break logic, or it will continue to iterate forever
+
+def natural_numbers():
+    n = 0
+    while n < 10:
+        yield n
+        n += 1
+
+## use next() instead of the generator object method obj.next() to avoid the stop
+## iteration error. the None argument means just return nothing
+## if you assign the natural_numbers function into a new variable, it will return a new
+## generator object starting from scratch
+
+ggg = natural_numbers()
+
+## on lists, instead of items(), using iteritems() will lazily build the key-value pairs
+
+## Randomness
+import random
+
+four_uniform_randoms = [random.random() for _ in range(4)]
