@@ -51,12 +51,11 @@ grid[2,1:] = [(x, 2) for x in range(1,5,1)]
 grid[1,1:] = [(x, 3) for x in range(1,5,1)]
 grid[0,1:] = [(x, 4) for x in range(1,5,1)]
 
-np_sore = sorted([x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 == 0]) == \
-          sorted([v for i, v in np.ndenumerate(grid) if type(v) != int and sum(v) % 2 == 0]) == \
-          sum_of_rolls_even == \
-          sorted([b for a in grid[:4:,[1,2,3,4]] for b in a if sum(b) % 2 == 0]) == \
-          sorted(filter(sum_rolls_even, [b for a in grid[:4:,[1,2,3,4]] for b in a]))
+diff_ways = [
+    [x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 == 0],
+    [v for i, v in np.ndenumerate(grid) if type(v) != int and sum(v) % 2 == 0],
+    sum_of_rolls_even,
+    [b for a in grid[:4:,[1,2,3,4]] for b in a if sum(b) % 2 == 0],
+    filter(sum_rolls_even, [b for a in grid[:4:,[1,2,3,4]] for b in a])]
 
-# np_soro = [x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 != 0]
-
-## try by using pure numpy
+print all(map(sorted, diff_ways))
