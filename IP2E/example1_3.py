@@ -40,7 +40,7 @@ grid[4,1:], grid[:4,0] = labels
 dice_values = [(x, y) for x in range(1,5) for y in range(1,5)]
 
 for i, v in enumerate(range(3,-1,-1)):
-    grid[v,1 : ] = [x for x in dice_values if x[1] == i + 1]
+    grid[v,1 : ] = [x for x in dice_values if x[0] == i + 1]
 
 diff_ways = [
     [x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 == 0],
