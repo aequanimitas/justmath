@@ -228,3 +228,25 @@ class MySet:
 
 ## Functional Tools
 ## currying
+from functools import partial
+
+## interesting way of using partials
+## http://www.pydanny.com/python-partials-are-fun.html 
+
+import string
+
+alphaNumericTuples = zip(range(1,len(string.ascii_letters)), string.ascii_letters)
+
+## args and kwargs
+
+def doubler(f):
+    def g(x):
+        return 2 * f(x)
+    return g
+
+def f1(x):
+    return x + 1
+
+def magic(*args, **kwargs):
+    print "unnamed args: ", args
+    print "keyword args: ", kwargs
