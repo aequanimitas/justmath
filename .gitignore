@@ -1,10 +1,9 @@
 *.swp
+*.png
 env/
-<<<<<<< HEAD
 bin/
 lib/
 local/
 include/
-pip-selfcheck.json
 man/
-*.png
+pip-selfcheck.json

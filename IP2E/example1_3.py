@@ -33,30 +33,20 @@ atleast_on_roll_equal_four = [x for x in sample_space if (x[0] == 4 or x[1] == 4
 ## using numpy
 import numpy as np
 
-# x_labels = np.array("1 2 3 4".split())
-x_labels = y_labels = np.array(range(1,5,1))
-# we need a reversed order array for y label
-# y_labels = np.array("1 2 3 4".split()[::-1])
+labels = (np.array(range(1,5)), np.array(range(4,0,-1)))
 grid = np.zeros((5,5), object)
+grid[4,1:], grid[:4,0] = labels
 
-## setup labels
-## apply to fourth row (0), per column
-grid[4,1:] = x_labels
-## apply to first column, all rows
-grid[:4,0] = y_labels
+dice_values = [(x, y) for x in range(1,5) for y in range(1,5)]
 
-## manual insertion of elements
-grid[3,1:] = [(x, 1) for x in range(1,5,1)]
-grid[2,1:] = [(x, 2) for x in range(1,5,1)]
-grid[1,1:] = [(x, 3) for x in range(1,5,1)]
-grid[0,1:] = [(x, 4) for x in range(1,5,1)]
+for i, v in enumerate(range(3,-1,-1)):
+    grid[v,1 : ] = [x for x in dice_values if x[0] == i + 1]
 
-np_sore = sorted([x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 == 0]) == \
-          sorted([v for i, v in np.ndenumerate(grid) if type(v) != int and sum(v) % 2 == 0]) == \
-          sum_of_rolls_even == \
-          sorted([b for a in grid[:4:,[1,2,3,4]] for b in a if sum(b) % 2 == 0]) == \
-          sorted(filter(sum_rolls_even, [b for a in grid[:4:,[1,2,3,4]] for b in a]))
+diff_ways = [
+    [x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 == 0],
+    [v for i, v in np.ndenumerate(grid) if type(v) != int and sum(v) % 2 == 0],
+    sum_of_rolls_even,
+    [b for a in grid[:4:,[1,2,3,4]] for b in a if sum(b) % 2 == 0],
+    filter(sum_rolls_even, [b for a in grid[:4:,[1,2,3,4]] for b in a])]
 
-# np_soro = [x for a in grid[:] for x in a if type(x) != int and sum(x) % 2 != 0]
-
-## try by using pure numpy
+print all(map(sorted, diff_ways))
