@@ -225,4 +225,6 @@ class MySet:
             del self.dict[value]
         except KeyError:
             print "Key doesn't exist"
-             
+
+## Functional Tools
+## currying
