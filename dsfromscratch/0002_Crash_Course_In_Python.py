@@ -198,3 +198,31 @@ print all([
     3 == len(re.split("[ab]", "carbs")),
     "R-D-" == re.sub("[0-9]", "-", "R2D2")
     ])
+
+## OOP
+## recreating the Set class
+
+class MySet:
+
+    def __init__(self, values=None):
+        self.dict = {}
+        if values is not None:
+            for value in values:
+                self.add(value)
+
+    def __repr__(self):
+        """ This is helpful while in repl """
+        return "Set: " + str(self.dict.keys())
+
+    def add(self, value):
+        self.dict[value] = True
+
+    def contains(self, value):
+        return value in self.dict
+
+    def remove(self, value):
+        try:
+            del self.dict[value]
+        except KeyError:
+            print "Key doesn't exist"
+             
