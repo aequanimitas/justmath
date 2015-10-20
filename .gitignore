@@ -1,4 +1,5 @@
 *.swp
+*.png
 env/
 bin/ 
 lib/ 
