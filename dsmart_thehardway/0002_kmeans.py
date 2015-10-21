@@ -19,6 +19,6 @@ sheet["4MC"] = sheet["OfferInformation"]
 for _, v in enumerate(range(1,5)):
     sheet["4MC"]["Cluster {}".format(v)] = pd.Series(0, index=sheet["Matrix"].index)
 
-sheet["Distance to Cluster"] = pd.DataFrame(np.array([sheet["Pivot"].apply(np.sum).apply(np.sqrt)]), 
-                      index=["Distance from Cluster 1"], 
-                      columns=sheet["Pivot"].columns)
+dtc_initvals = np.array([sheet["Pivot"].apply(np.sum).apply(np.sqrt) for x in range(1,5)])
+dtc_indexes = ["Distance from Cluster {}".format(x) for x in range(1,5)]
+sheet["Distance to Cluster"] = pd.DataFrame(dtc_initvals, index=dtc_indexes, columns=sheet["Pivot"].columns)
