@@ -9,6 +9,13 @@ sheet["Pivot"] = pd.pivot_table(sheet["Transactions"],
                                 aggfunc=len).fillna(" ")
 # adjust index, defaults to 0
 sheet["OfferInformation"] = wine_kmc.parse("OfferInformation")
-sheet["OfferInformation"].set_index([range(1,33)])
 
-sheet["Matrix"] = pd.concat([sheet["OfferInformation"], sheet["Pivot"]], axis=1)
+sheet["Matrix"] = pd.concat([sheet["OfferInformation"].set_index([range(1,33)]), 
+                             sheet["Pivot"]], axis=1)
+sheet["4MC"] = sheet["OfferInformation"]
+
+# add the 4 cluster columns
+for _, v in enumerate(range(1,5)):
+    sheet["4MC"]["Cluster {}".format(v)] = pd.Series(0, index=sheet["Matrix"].index)
+
+
