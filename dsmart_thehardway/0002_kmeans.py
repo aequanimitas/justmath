@@ -7,4 +7,8 @@ sheet["Pivot"] = pd.pivot_table(sheet["Transactions"],
                                 columns=["Customer Last Name"],
                                 index=["Offer #"],
                                 aggfunc=len).fillna(" ")
-sheet["Matrix"] = pd.concat([wine_kmc.parse("OfferInformation"), sheet["Pivot"]], axis=1)
+# adjust index, defaults to 0
+sheet["OfferInformation"] = wine_kmc.parse("OfferInformation")
+sheet["OfferInformation"].set_index([range(1,33)])
+
+sheet["Matrix"] = pd.concat([sheet["OfferInformation"], sheet["Pivot"]], axis=1)
