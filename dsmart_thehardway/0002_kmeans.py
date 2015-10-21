@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 wine_kmc = pd.ExcelFile("data/WineKMC.xlsx")
 sheet = {}
@@ -6,7 +7,7 @@ sheet["Transactions"] = wine_kmc.parse("Transactions")
 sheet["Pivot"] = pd.pivot_table(sheet["Transactions"],
                                 columns=["Customer Last Name"],
                                 index=["Offer #"],
-                                aggfunc=len).fillna(" ")
+                                aggfunc=len).fillna(0)
 # adjust index, defaults to 0
 sheet["OfferInformation"] = wine_kmc.parse("OfferInformation")
 
@@ -18,4 +19,6 @@ sheet["4MC"] = sheet["OfferInformation"]
 for _, v in enumerate(range(1,5)):
     sheet["4MC"]["Cluster {}".format(v)] = pd.Series(0, index=sheet["Matrix"].index)
 
-
+sheet["Distance to Cluster"] = pd.DataFrame(np.array([sheet["Pivot"].apply(np.sum).apply(np.sqrt)]), 
+                      index=["Distance from Cluster 1"], 
+                      columns=sheet["Pivot"].columns)
