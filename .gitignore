@@ -1,9 +1,4 @@
 *.swp
 *.png
+venv/
 env/
-bin/
-lib/
-local/
-include/
-man/
-pip-selfcheck.json
