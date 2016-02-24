@@ -2,13 +2,18 @@ import numpy as np
 import pandas as pd
 import matplotlib
 
+import os
+
 rizal_area = "Binangonan|Cainta|Taytay|Antipolo|Angono|Tanay"
 
-ncr_routes_data = pd.read_csv("data/routespublicutilityvehiclesmetromanila.csv")
+file_path = os.path.join(os.path.dirname(__file__), "data/routespublicutilityvehiclesmetromanila.csv")
+
+ncr_routes_data = pd.read_csv(file_path)
 
 def routes_by_area(cond_area):
     return ncr_routes_data[ncr_routes_data["route"].str.contains(cond_area)].groupby("puv")
 
+print "Rizal"
 print routes_by_area(rizal_area).count()
 
 # seperate origins and destination into their own columns
