@@ -1,14 +1,13 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib
 
-import os
+import data as phdata
 
 rizal_area = "Binangonan|Cainta|Taytay|Antipolo|Angono|Tanay"
 
-file_path = os.path.join(os.path.dirname(__file__), "data/routespuvmm.csv")
-
-ncr_routes_data = pd.read_csv(file_path)
+ncr_routes_data = phdata.ncr_routes_data
 
 def routes_by_area(cond_area):
     return ncr_routes_data[ncr_routes_data["route"].str.contains(cond_area)].groupby("puv")
