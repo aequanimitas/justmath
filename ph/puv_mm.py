@@ -17,10 +17,12 @@ print routes_by_area(rizal_area).count()
 
 # seperate origins and destination into their own columns
 
-ncr_routes_data["origin"] = pd.Series(
-                                ncr_routes_data["route"].str.split(" - ").str[0],
-                                index=ncr_routes_data.index)
+def by_endpoint(df, col='route', idx=0, splt=' - '):
+    return pd.Series(df[col].str.split(splt).str[idx], index=df.index)
+    
+ncr_routes_data["origin"] = by_endpoint(ncr_routes_data, idx=0)
+ncr_routes_data["destination"] = by_endpoint(ncr_routes_data, idx=1)
 
-ncr_routes_data["destination"] = pd.Series(
-                                ncr_routes_data["route"].str.split(" - ").str[1],
-                                index=ncr_routes_data.index)
+# filter paths
+passage = pd.DataFrame()
+passage['pair']  = ncr_routes_data['destination'].str.split(' via ')
