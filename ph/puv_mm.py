@@ -6,7 +6,7 @@ import os
 
 rizal_area = "Binangonan|Cainta|Taytay|Antipolo|Angono|Tanay"
 
-file_path = os.path.join(os.path.dirname(__file__), "data/routespublicutilityvehiclesmetromanila.csv")
+file_path = os.path.join(os.path.dirname(__file__), "data/routespuvmm.csv")
 
 ncr_routes_data = pd.read_csv(file_path)
 
