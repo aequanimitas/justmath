@@ -8,4 +8,10 @@ eventBPredicate x = length(x !! 0) > 0
 eventB = [x | x <- sampleSpace, eventBPredicate x]
 
 eventCPredicate x = (eventBPredicate x) && (eventAPredicate x)
-eventC = [x | x <- sampleSpace, eventBPredicate x, eventAPredicate x]
+eventC = [x | x <- sampleSpace, eventBPredicate x, any eventAPredicate x]
+
+eventCOrPredicate x = any eventAPredicate x || eventBPredicate x
+eventCOr = [x | x <- sampleSpace, eventCOrPredicate x]
+
+eventDPredicate x = not (any eventAPredicate x)
+eventD = [x | x <- sampleSpace, eventDPredicate x]
