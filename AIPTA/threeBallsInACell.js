@@ -45,7 +45,7 @@ function cellNotEmpty(e,i) {
 }
 
 console.log(
-"Event A: Rows with cells that has atleast one element\n" +
+"Event A: Rows with cells that has atleast two elements\n" +
 "Event B: Rows with first cells that are not empty\n" + 
 "Event C: Rows that both event A and B occur\n" +
 "Event COr: Rows that event A or B occur\n" +
