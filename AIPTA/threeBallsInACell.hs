@@ -15,3 +15,7 @@ eventCOr = [x | x <- sampleSpace, eventCOrPredicate x]
 
 eventDPredicate x = not (any eventAPredicate x)
 eventD = [x | x <- sampleSpace, eventDPredicate x]
+
+eventU1 = [x | x <- sampleSpace, length (x !! 1) == 0]
+eventU2 = [x | x <- sampleSpace, 'a' `elem` (x !! 0)]
+
