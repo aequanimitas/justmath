@@ -40,6 +40,10 @@ s1s2ImpliesS3 = [x | x <- simply1 `intersect` simply2, x `elem` simply3]
 doubly1 = exDef4Fn 0 2
 doubly2 = exDef4Fn 1 2
 doubly3 = exDef4Fn 2 2
+
+-- if cell 1 length is greater than 0
+-- and if cell 2 length is greater than 0
+-- then an empty event happens
 d1d2Empty = length (doubly1 `intersect` doubly2) == 0
 
 t3ImpliesE2 = [x | x <- triply1, x `elem` e2Empty]
