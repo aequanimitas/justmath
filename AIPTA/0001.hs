@@ -29,9 +29,19 @@ e1Empty = exDef4Fn 0 0
 e2Empty = exDef4Fn 1 0
 
 triply3 = exDef4Fn 2 3
+triply1 = exDef4Fn 0 3
 
 simply3 = exDef4Fn 2 1
 simply2 = exDef4Fn 1 1
 simply1 = exDef4Fn 0 1
 
 s1s2ImpliesS3 = [x | x <- simply1 `intersect` simply2, x `elem` simply3]
+
+doubly1 = exDef4Fn 0 2
+doubly2 = exDef4Fn 1 2
+doubly3 = exDef4Fn 2 2
+d1d2Empty = length (doubly1 `intersect` doubly2) == 0
+
+t3ImpliesE2 = [x | x <- triply1, x `elem` e2Empty]
+
+dUnion = doubly1 `union` doubly2 `union` doubly3
