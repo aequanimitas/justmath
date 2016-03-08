@@ -30,6 +30,8 @@ e2Empty = exDef4Fn 1 0
 
 triply3 = exDef4Fn 2 3
 
-simply3 = [x | x <- sampleSpace , cellLength (x !! 2) 1]
-simply2 = [x | x <- sampleSpace , cellLength (x !! 1) 1]
-simply1 = [x | x <- sampleSpace , cellLength (x !! 0) 1]
+simply3 = exDef4Fn 2 1
+simply2 = exDef4Fn 1 1
+simply1 = exDef4Fn 0 1
+
+s1s2ImpliesS3 = [x | x <- simply1 `intersect` simply2, x `elem` simply3]
