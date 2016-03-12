@@ -49,3 +49,6 @@ d1d2Empty = length (doubly1 `intersect` doubly2) == 0
 t3ImpliesE2 = [x | x <- triply1, x `elem` e2Empty]
 
 dUnion = doubly1 `union` doubly2 `union` doubly3
+
+-- discrete sample space
+ex5A = [x / 27 :: Rational | x <- [1..length sampleSpace], x <- [1]]
