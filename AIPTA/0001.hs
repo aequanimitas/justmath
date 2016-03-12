@@ -111,3 +111,10 @@ factorial x
   | x == 0         = 0
   | (x - 1) == 0   = x
   | otherwise      = x * factorial (x - 1)
+
+permute :: Integer -> Integer -> Integer
+permute x y
+  | x == 1         = 1 
+  | y == 0         = permute x 1
+  | x == y         = 1
+  | otherwise      = x * permute (x - 1) y
