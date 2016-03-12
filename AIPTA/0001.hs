@@ -20,7 +20,60 @@ predicateC x y = x > 40 && y >= 40
 
 -- relation among events
 --
-sampleSpace = [["abc","",""], ["","abc",""], ["","","abc"],["ab","c",""], ["ac","b",""], ["bc","a",""], ["ab","","c"], ["ac","","b"], ["bc","","a"], ["a","bc",""], ["b","ac",""], ["c","ab",""], ["a","","bc"], ["b","","ac"], ["c","","ab"], ["","ab","c"], ["","ac","b"], ["","bc","a"], ["","a","bc"], ["","b","ac"], ["","c","ab"],["a","b","c"], ["a","c","b"], ["b","a","c"], ["b","c","a"], ["c","a","b"], ["c","b","a"]]
+sampleSpace = [
+  ["abc","",""], 
+  ["","abc",""], 
+  ["","","abc"],
+  ["ab","c",""], 
+  ["ac","b",""], 
+  ["bc","a",""], 
+  ["ab","","c"], 
+  ["ac","","b"], 
+  ["bc","","a"], 
+  ["a","bc",""], 
+  ["b","ac",""], 
+  ["c","ab",""], 
+  ["a","","bc"], 
+  ["b","","ac"], 
+  ["c","","ab"], 
+  ["","ab","c"], 
+  ["","ac","b"], 
+  ["","bc","a"], 
+  ["","a","bc"], 
+  ["","b","ac"], 
+  ["","c","ab"],
+  ["a","b","c"], 
+  ["a","c","b"], 
+  ["b","a","c"], 
+  ["b","c","a"], 
+  ["c","a","b"], 
+  ["c","b","a"]]
+
+-- indistiguishableBalls = [
+--   ["aaa","",""],
+--   ["","aaa",""],
+--   ["","","aaa"],
+--   ["aa","a",""],
+--   ["aa","","a"],
+--   ["a","aa",""],
+--   ["a","","aa"],
+--   ["","aa","a"],
+--   ["","a","aa"],
+--   ["a","a","a"]
+-- ]
+-- 
+-- ibDistribution = [
+--   1 % 27,
+--   1 % 27,
+--   1 % 27,
+--   1 % 9,
+--   1 % 9,
+--   1 % 9,
+--   1 % 9,
+--   1 % 9,
+--   1 % 9,
+--   2 % 9
+-- ]
 
 cellLength x y = length x == y
 -- E1E2 = T3
@@ -52,3 +105,9 @@ dUnion = doubly1 `union` doubly2 `union` doubly3
 
 -- discrete sample space
 ex5A = [x / 27 :: Rational | x <- [1..length sampleSpace], x <- [1]]
+
+factorial :: Integer -> Integer
+factorial x
+  | x == 0         = 0
+  | (x - 1) == 0   = x
+  | otherwise      = x * factorial (x - 1)
