@@ -49,6 +49,10 @@ sampleSpace = [
   ["c","a","b"], 
   ["c","b","a"]]
 
+charSet = ["a", "b", "c"]
+-- sampling with replacement and with ordering
+ssComprehension = [[x,y,z] | x <- charSet, y <- charSet, z <- charSet]
+
 -- indistiguishableBalls = [
 --   ["aaa","",""],
 --   ["","aaa",""],
