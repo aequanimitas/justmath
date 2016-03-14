@@ -130,9 +130,14 @@ ssc [] = [[]]
 -- Exercises
 -- 1
 exer1 = permutations [1..5]
+-- 72
 exer1A = [x | x <- exer1, odd (head x)]
+-- 72
 exer1B = [x | x <- exer1, odd (head (tail x))]
+-- 36
 exer1C = [x | x <- exer1, odd(head x) && odd (head (tail x))]
+exer1D = ((72 / 120) * 2) - (36 / 120) :: Rational
+
 -- 3
 exer3 = permutations [1..4]
 exer3A1 = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
