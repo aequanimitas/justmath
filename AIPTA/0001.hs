@@ -136,8 +136,11 @@ exer1A = [x | x <- exer1, odd (head x)]
 exer1B = [x | x <- exer1, odd (head (tail x))]
 -- 36
 exer1C = [x | x <- exer1, odd(head x) && odd (head (tail x))]
+-- or you can do this
+exer1C1 = [x | x <- exer1A `intersect` exer1B]
 exer1D = ((72 / 120) * 2) - (36 / 120) :: Rational
 
 -- 3
 exer3 = permutations [1..4]
+exer3Predicate x y = x !! y < x !! (y + 1)
 exer3A1 = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
