@@ -128,7 +128,11 @@ permute x y
 ssc [] = [[]]
 
 -- Exercises
-
+-- 1
+exer1 = permutations [1..5]
+exer1A = [x | x <- exer1, odd (head x)]
+exer1B = [x | x <- exer1, odd (head (tail x))]
+exer1C = [x | x <- exer1, odd(head x) && odd (head (tail x))]
 -- 3
 exer3 = permutations [1..4]
 exer3A1 = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
