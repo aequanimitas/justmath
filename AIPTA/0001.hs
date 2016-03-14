@@ -126,3 +126,9 @@ permute x y
   | otherwise      = x * permute (x - 1) y
 
 ssc [] = [[]]
+
+-- Exercises
+
+-- 3
+exer3 = permutations [1..4]
+exer3A1 = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
