@@ -65,7 +65,9 @@ ssComprehension = [[x,y,z] | x <- charSet, y <- charSet, z <- charSet]
 --   ["","a","aa"],
 --   ["a","a","a"]
 -- ]
--- 
+
+generate4to9 = [[x,y,z] | x <- ["a", "aa", " "], y <- ["a", "aa", " "], z <- [" "]]
+
 -- ibDistribution = [
 --   1 % 27,
 --   1 % 27,
@@ -122,3 +124,5 @@ permute x y
   | y == 0         = permute x 1
   | x == y         = 1
   | otherwise      = x * permute (x - 1) y
+
+ssc [] = [[]]
