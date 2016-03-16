@@ -144,6 +144,10 @@ exer3 = permutations [1..4]
 exer3Predicate x y = (x !! y) == (y + 1)
 exer3GenFrac x = (realToFrac (length x)) / (realToFrac (length exer3))
 exer3GenSpace y = [x | x <- exer3, exer3Predicate x y]
+exer3A1 = exer3GenSpace 0
+exer3A2 = exer3GenSpace 1
+exer3A3 = exer3GenSpace 2
+exer3A4 = exer3GenSpace 3
 
 independentE = [[x,y] | x <- [1,2], y <- [1,2]]
 
