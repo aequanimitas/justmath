@@ -148,6 +148,7 @@ exer3A1 = exer3GenSpace 0
 exer3A2 = exer3GenSpace 1
 exer3A3 = exer3GenSpace 2
 exer3A4 = exer3GenSpace 3
+exer3Ai = exer3A1 `union` exer3A2 `union` exer3A3 `union` exer3A4
 
 independentE = [[x,y] | x <- [1,2], y <- [1,2]]
 
