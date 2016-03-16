@@ -49,6 +49,13 @@ sampleSpace = [
   ["c","a","b"], 
   ["c","b","a"]]
 
+-- r = 3 balls, n = 4 cells, should be 81 sample points
+example2B = [[x,y,z,a] | x <- [1..3], y <- [1..3], z <- [1..3], a <- [1..3]]
+-- instances
+-- 3 balls with 4 cells
+example2BAllThirdBall = foldl (*) 1 [x | x <- [1..4], x <- [1/3 :: Rational]]
+
+
 charSet = ["a", "b", "c"]
 -- sampling with replacement and with ordering
 ssComprehension = [[x,y,z] | x <- charSet, y <- charSet, z <- charSet]
@@ -137,3 +144,5 @@ exer3 = permutations [1..4]
 exer3Predicate x y = (x !! y) == (y + 1)
 exer3GenFrac x = (realToFrac (length x)) / (realToFrac (length exer3))
 exer3GenSpace y = [x | x <- exer3, exer3Predicate x y]
+
+independentE = [[x,y] | x <- [1,2], y <- [1,2]]
