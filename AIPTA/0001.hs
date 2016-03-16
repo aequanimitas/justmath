@@ -143,4 +143,6 @@ exer1D = (((realToFrac (length exer1A)) / realToFrac (length exer1)) * 2) - ((re
 -- 3
 exer3 = permutations [1..4]
 exer3Predicate x y = x !! y < x !! (y + 1)
-exer3A1 = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
+exer3GenSpace y = [x | x <- exer3, exer3Predicate x y]
+exer3Ai = [ x | x <- exer3, (x !! 0 < x !! 1) && (x !! 1 < x !! 2) && (x !! 2 < x !! 3)]
+
