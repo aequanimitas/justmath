@@ -146,3 +146,6 @@ exer3GenFrac x = (realToFrac (length x)) / (realToFrac (length exer3))
 exer3GenSpace y = [x | x <- exer3, exer3Predicate x y]
 
 independentE = [[x,y] | x <- [1,2], y <- [1,2]]
+
+-- ft in a row
+fthrows = foldl (*) 1 [x | x <- [1..10], x <- [0.75]]
