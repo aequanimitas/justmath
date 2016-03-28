@@ -19,3 +19,4 @@ probWinWithReplace = prob1stGreen * prob1stGreen
 fairCoins = [x | x <- [1..5], x <- [0.5]]
 unfairCoins = [x | x <- [1..3], x <- [0.6]]
 coinBag = fairCoins ++ unfairCoins
+
