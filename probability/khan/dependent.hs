@@ -15,4 +15,7 @@ probWin = prob1stGreen * prob2ndGreen
 probWinWithReplace = prob1stGreen * prob1stGreen
 
 -- coins
--- 8 coins in a bag. 3 of them are unfair
+
+fairCoins = [x | x <- [1..5], x <- [0.5]]
+unfairCoins = [x | x <- [1..3], x <- [0.6]]
+coinBag = fairCoins ++ unfairCoins
